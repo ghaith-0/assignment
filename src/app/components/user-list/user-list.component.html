@@ -1,0 +1,42 @@
+
+<app-header title="Users"></app-header>
+
+<app-loading [isLoading]="loading"></app-loading>
+
+
+<div class="search-container">
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Search by ID" (input)="searchUsers()">
+  <div class="search-results" *ngIf="searchResults.length > 0">
+    <div *ngFor="let result of searchResults" class="search-result" (click)="navigateToUserDetail(result.id)">
+      <div class="user-avatar">
+        <img [src]="result.avatar" alt="User Avatar">
+      </div>
+      <div class="user-info">
+        {{ result.first_name }} {{ result.last_name }}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="user-list-container" [@fadeInOut]="users.length > 0">
+  <div class="user-card-container">
+    <app-user-card *ngFor="let user of users" [user]="user"></app-user-card>
+  </div>
+
+  <div class="pagination-container">
+    <div class="per-page-select">
+      <label for="perPageSelect">Per Page: </label>
+      <select id="perPageSelect" [(ngModel)]="perPage" (change)="onPerPageChange()">
+        <option *ngFor="let option of perPageOptions" [value]="option">{{ option }}</option>
+      </select>
+    </div>
+
+    <div class="pagination-info">Page {{ currentPage }} of {{ totalPages }}</div>
+
+    <div class="user-pagination">
+      <button (click)="onPageChange(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
+      <button (click)="onPageChange(currentPage + 1)" [disabled]="currentPage >= totalPages">Next</button>
+    </div>
+  </div>
+</div>

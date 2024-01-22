@@ -1,0 +1,6 @@
+<div class="user-card" [@fadeIn] (click)="navigateToUserDetail(user.id)">
+  <img [src]="user.avatar" alt="User Avatar">
+  <div class="user-details">
+    <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+  </div>
+</div>

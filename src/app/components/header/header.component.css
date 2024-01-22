@@ -1,0 +1,24 @@
+.header {
+  height:  30px;
+  background-color: #007BFF;
+  color: #fff;
+  top: 0;
+  padding: 5px 5px;
+  text-align: center;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.fixed-header {
+  height:  30px;
+  background-color: #0056b3;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 5px 5px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}

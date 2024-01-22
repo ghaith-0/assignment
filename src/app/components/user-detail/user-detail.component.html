@@ -1,0 +1,17 @@
+<app-header title="User Details"></app-header>
+<app-loading [isLoading]="loading"></app-loading>
+<div class="user-card" [@fadeIn]>
+  <div class="user-avatar">
+    <img [src]="user.avatar" alt="User Avatar">
+  </div>
+
+  <div class="user-info">
+    <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+    <p>ID: {{ user.id }}</p>
+    <p>Email: {{ user.email }}</p>
+  </div>
+</div>
+
+<div class="back-button">
+  <button (click)="navigateBack()">Back to Users List</button>
+</div>
