@@ -37,7 +37,9 @@
 }
 .user-pagination {
   display: flex;
-}.page-buttons button {
+}
+
+.page-buttons button {
   margin-left: 8px;
 }
 button {
@@ -62,6 +64,8 @@ button:hover:not(:disabled) {
 .search-container {
   position: relative;
   margin-bottom: 20px;
+  display: flex;
+  width: 100%;
 }
 
 input {
