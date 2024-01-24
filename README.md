@@ -6,7 +6,7 @@ Maids.cc Software Developer - Front-End..
 ## Development server
 
 
-- Created using Angulatr 16
+- Created using Angular 16
 
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
